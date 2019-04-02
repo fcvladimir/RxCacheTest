@@ -17,15 +17,6 @@ android {
     }
 
     buildTypes {
-
-        def STRING = "String"
-
-        def BLUECATS_TOKEN = "BLUECATS_TOKEN"
-
-        all {
-            buildConfigField STRING, BLUECATS_TOKEN, "\"c7710c44-2ad3-4da2-bd74-280ab8546296\""
-        }
-
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
