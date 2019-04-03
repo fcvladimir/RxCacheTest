@@ -7,10 +7,14 @@ import io.reactivex.Single
 interface IInfoDS {
 
     fun fetchInfo(): Single<Info> {
-        return Single.error(UnsupportedOperationException("This DS implementation does not support fetchCorrMessage() function"))
+        return Single.error(UnsupportedOperationException("This DS implementation does not support fetchInfo() function"))
     }
 
-    fun saveInfo(): Completable {
-        return Completable.error(UnsupportedOperationException("This DS implementation does not support modifyCorrMessage() function"))
+    fun fetchFromStorage(): Single<Info> {
+        return Single.error(UnsupportedOperationException("This DS implementation does not support fetchFromStorage() function"))
+    }
+
+    fun dispatchToStorage(info: Info): Completable {
+        return Completable.error(UnsupportedOperationException("This DS implementation does not support dispatchToStorage() function"))
     }
 }

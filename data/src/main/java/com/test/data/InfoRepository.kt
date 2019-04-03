@@ -32,8 +32,8 @@ class InfoRepository(
     }
 
     private fun fetchInfo() =
-            corrMessageDs.fetchCorrMessage()
+            localInfoDs.fetchInfo()
                     .onErrorResumeNext(
-                            corrMessageDs.fetchCorrMessage("", "")
+                            remoteInfoDs.fetchInfo()
                     )
 }

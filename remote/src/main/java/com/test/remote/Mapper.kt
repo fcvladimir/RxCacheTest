@@ -5,7 +5,7 @@ import com.test.remote.model.InfoResult
 
 class Mapper {
 
-    fun toDomain(input: InfoResult): Info? {
+    fun toDomain(input: InfoResult): Info {
         return Info(input.number)
     }
 }
