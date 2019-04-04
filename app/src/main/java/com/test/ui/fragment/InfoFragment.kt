@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.test.R
 import com.test.di.KOIN_KEY_SCOPE_INFO_FRAGMENT
+import com.test.domain.model.Info
 import com.test.presentation.mvp.home.IInfoContract
 import com.test.ui.BaseFragment
+import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
 import org.koin.android.scope.ext.android.bindScope
 import org.koin.android.scope.ext.android.getOrCreateScope
@@ -36,6 +38,11 @@ class InfoFragment : BaseFragment(), IInfoContract.View {
 
         presenter.view = this
 
+        presenter.fetchInfo()
+    }
+
+    override fun showInfo(info: Info) {
+        context?.toast("HERE")
     }
 
     override fun onDestroyView() {

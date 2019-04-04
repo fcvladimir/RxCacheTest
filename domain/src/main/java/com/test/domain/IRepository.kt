@@ -27,7 +27,10 @@ interface IRepository<V> {
 
     interface Delete
 
-    interface Observe
+    interface Observe {
+
+        class FetchInfoSubscriber : Observe
+    }
 
 }
 

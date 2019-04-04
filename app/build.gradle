@@ -14,7 +14,7 @@ ext.anko_version = '0.10.5'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.test"
+        applicationId "com.test.rx"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
